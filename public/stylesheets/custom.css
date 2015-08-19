@@ -3,7 +3,7 @@
 }
 
 body {
-	background: #cff;
+	background: #FFF8DC;
 }
 
 #header {
@@ -168,7 +168,7 @@ div.field, div.actions {
 	list-style: square;
 }
 
-ul.users {
+table.users {
 	margin-top: 1em; 
 }
 

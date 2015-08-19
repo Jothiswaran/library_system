@@ -2,12 +2,29 @@
 	<tr>
 		<td class="main"> 
 		<h2>
+			<b>Profile</b>
+			<br>
 			<%= h @user.name %> 
 		</h2>
 		</td>
+	</tr>
+	<tr>
 		<td class="sidebar round">
-			<strong>Name</strong> <%= h @user.name %><br />
-			<strong>URL</strong> <%= link_to user_path(@user), @user %> 
+			<table>
+				<tr>
+					<td>
+						<strong>Name</strong> </td><td>: <%= h @user.name %>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Email id</strong> </td><td>: <%= h @user.email %>
+					</td>
+				</tr>
+			</table> 
 		</td>
  	</tr>
 </table>
+<br>
+<br>
+<b><%= link_to "Home", root_path %></b>
