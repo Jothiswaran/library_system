@@ -1,13 +1,26 @@
 <h2>All users</h2>
 <table class="users">
+    <tr>
+    <th> ID </th>
+    <th> &nbsp&nbsp&nbsp Name </th>
+    </tr>
   <% @users.each do |user| %>
     <tr>
       <td>
+      <%= user.id %>
+      <td>
+        &nbsp&nbsp&nbsp
         <%= link_to h(user.name), user %>
       </td>
       <td>
         <% if current_user.admin? %>
-        |  <%= link_to "delete", user, :method => :delete, :confirm => "You sure?" %> 
+        <td>
+        &nbsp&nbsp&nbsp&nbsp|  
+        </td>
+        <td>
+        &nbsp&nbsp&nbsp
+        <%= link_to "delete", user, :method => :delete, :confirm => "You sure?" %>
+        </td> 
       </td>
         <% end %> 
     </tr>
@@ -15,4 +28,3 @@
 </table>
 <br>
 <br>
-<b><%= link_to "Home", root_path %></b>

@@ -1,0 +1,39 @@
+<% if !@searchresults.empty? %>
+<table border="1" style="width:100%">
+<tr>
+    <th>
+        ID
+    </th>
+    <th>
+        Book Name
+    </th>
+    <th>
+        Author Name
+    </th>
+    <th>
+        Availability
+    </th>
+  </tr>
+<% @searchresults.each do |search| %>
+  <tr>
+    <td>
+      <%= search.id %>
+    </td>
+    <td>
+      <%= search.name %>
+    </td>
+    <td>
+      <%= search.author %>
+    </td>
+    <td>
+      <% if search.available %>
+        Y
+      <% else %>
+        N
+      <% end %>
+  </tr>
+<% end %> 
+</table>
+<% else %>
+<p> No Matching Books are found.</p>
+<% end %>

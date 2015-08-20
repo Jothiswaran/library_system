@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
 	validates_confirmation_of :password
 	validates_presence_of :password
 	validates_length_of :password, :within => 6..40
-	attr_accessible :name, :email, :password, :password_confirmation
 	before_save :encrypt_password
+
 	def has_password?(submitted_password)
 		encrypted_password == encrypt(submitted_password)
 	end

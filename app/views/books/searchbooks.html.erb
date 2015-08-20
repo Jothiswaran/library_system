@@ -1,0 +1,36 @@
+<% form_tag bookname_path, :method => 'get' do %>
+<%= text_field_tag :search ,params[:search]%>
+<br>
+<br>
+<%= submit_tag "ByAuthor", :name=>'button1' %>
+<%= submit_tag "ByBook", :name=>'button2' %>
+<% end %>
+<h2 align="center">
+List of available books in the library
+</h1>
+<table border="1" style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>BookName</th>
+    <th>AuthorName</th>
+  </tr>
+  <% @book.each do |book| %>
+    <tr>
+      <td>
+        <%= book.id %>
+      </td>
+      <td>
+        <%= book.name %> 
+      </td>
+      <td>
+        <%= book.author %>
+      </td>
+        <% if current_user.admin? %>
+        <td><%= link_to "delete", book, :method => :delete, :confirm => "You sure?" %></td>
+      <% end %>
+    </tr>
+  <% end %> 
+</table>
+<br>
+<br>
+<%= link_to "List of all books", allbooks_path %>

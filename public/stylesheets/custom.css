@@ -6,6 +6,11 @@ body {
 	background: #FFF8DC;
 }
 
+.books {
+	text-align: left;
+	
+}
+
 #header {
 	 padding-top: 20px;
 }

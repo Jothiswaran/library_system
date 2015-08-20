@@ -1,0 +1,16 @@
+<h2>Add Books</h2>
+<% form_for(@book) do |f| %> 
+  <%= f.error_messages %>
+  <div class="field">
+    <%= f.label :name , "Book Name" %><br />
+    <%= f.text_field :name %> 
+  </div>
+  <div class="field">
+    <%= f.label :author, "Author Name" %><br /> 
+    <%= f.text_field :author %>
+  </div>
+  </div>
+  <div class="actions">
+  <%= f.submit "Create" %>
+  </div> 
+<% end %>

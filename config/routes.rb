@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :books
+
+  map.resources :books
+
   map.resources :users
 
   map.resources :sessions, :only => [:new, :create, :destroy]
@@ -11,6 +15,13 @@ ActionController::Routing::Routes.draw do |map|
   map.help    '/help',    :controller => 'pages', :action => 'help'
 
   map.signup '/signup', :controller => 'users', :action => 'new'
+
+
+  map.bookshome '/bookshome', :controller => 'books', :action => 'bookshome'
+  map.addbooks  '/addbooks', :controller => 'books', :action => 'addbooks'
+  map.searchbooks  '/searchbooks', :controller => 'books', :action => 'searchbooks'
+  map.bookname 'bookname', :controller => 'books', :action => 'bookname'
+  map.allbooks 'allbooks', :controller => 'books', :action => 'allbooks'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
