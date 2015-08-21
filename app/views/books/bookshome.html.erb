@@ -4,7 +4,11 @@
 			<% if current_user.admin? %>
 				<li><%= link_to "Add Books to Library", addbooks_path %></li>
 			<% end %>
-			<li><%= link_to "Search Books", searchbooks_path %></li> 
+			<li><%= link_to "Search Books", searchbooks_path %></li>
+			<% if !current_user.admin? %>
+				<li><%= link_to "Return Books", returnbooks_path %></li>
+			<% end %> 
+
 		<% end %>
 	</ul>
 	<br>

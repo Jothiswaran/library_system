@@ -28,9 +28,18 @@
     <td>
       <% if search.available %>
         Y
+        </td>
+        <% if current_user.admin? %>
+          <td><%= link_to "delete",search, :method => :delete, :confirm => "You sure?" %></td>
+        <% else %>
+          <td><%= link_to "issue", issue_path(:book_id => search.id) %></td>
+        <% end %>
       <% else %>
         N
+        </td>
+        <td></td>
       <% end %>
+
   </tr>
 <% end %> 
 </table>

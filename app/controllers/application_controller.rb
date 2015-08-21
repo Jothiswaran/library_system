@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   include SessionsHelper
+  include BorrowsHelper
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   filter_parameter_logging :password
   # Scrub sensitive parameters from your log

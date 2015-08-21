@@ -1,0 +1,30 @@
+
+<% if @returnbooks.empty? %>
+<p>
+There are no books to be returned
+</p>
+<% else %>
+<table border="1" style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>BookName</th>
+    <th>AuthorName</th>
+  </tr>
+  <% @returnbooks.each do |book| %>
+    <tr>
+      <td>
+        <%= book.id %>
+      </td>
+      <td>
+        <%= book.name %>
+      </td>
+      <td>
+        <%= book.author %>
+      </td>
+      <td>
+        <%= link_to "return", returnlibrary_path(:book_id => book.id) %>
+      </td>
+    </tr>
+  <% end %> 
+</table>
+<% end %>

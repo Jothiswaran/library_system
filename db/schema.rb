@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150819083813) do
+ActiveRecord::Schema.define(:version => 20150820120819) do
 
   create_table "books", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,19 @@ ActiveRecord::Schema.define(:version => 20150819083813) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "borrows", :force => true do |t|
+    t.date     "borrow_date"
+    t.date     "return_date"
+    t.boolean  "returned"
+    t.integer  "user_id"
+    t.integer  "book_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "borrows", ["book_id"], :name => "index_borrows_on_book_id"
+  add_index "borrows", ["user_id"], :name => "index_borrows_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

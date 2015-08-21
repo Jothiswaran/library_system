@@ -27,8 +27,12 @@ List of all books in the library
       <% end %>
       </td>
         <% if current_user.admin? %>
-        <td><%= link_to "delete", book, :method => :delete, :confirm => "You sure?" %></td>
-      <% end %>
+        <td>
+          <% if book.available %>
+            <%= link_to "delete", book, :method => :delete, :confirm => "You sure?" %></td>
+          <% end %>
+          </td>
+        <% end %>
     </tr>
   <% end %> 
 </table>

@@ -1,5 +1,7 @@
 require 'digest'
 class User < ActiveRecord::Base
+	has_many :borrows, :dependent => :destroy
+	has_many :books, :through => :borrow
 	attr_accessible :name, :email, :password, :password_confirmation
 	EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	attr_accessor :password

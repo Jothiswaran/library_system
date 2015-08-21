@@ -26,8 +26,10 @@ List of available books in the library
         <%= book.author %>
       </td>
         <% if current_user.admin? %>
-        <td><%= link_to "delete", book, :method => :delete, :confirm => "You sure?" %></td>
-      <% end %>
+          <td><%= link_to "delete", book, :method => :delete, :confirm => "You sure?" %></td>
+        <% else %>
+          <td><%= link_to "issue", issue_path(:book_id => book.id) %>
+        <% end %>
     </tr>
   <% end %> 
 </table>
