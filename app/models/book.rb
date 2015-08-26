@@ -23,7 +23,6 @@ class Book < ActiveRecord::Base
 		else
 			find(:all)
 		end
-
 	end
 
 	def self.findBook(flag)
@@ -33,13 +32,11 @@ class Book < ActiveRecord::Base
 			find(:all, :conditions => ['available = 1'])
 		end
 	end
-
+	
 	def self.update(id)
 		@b=Book.find(id)
 		@b.available=false
 		@b.save
-
 	end
-
 
 end
