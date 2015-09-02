@@ -1,11 +1,10 @@
 require 'digest'
 class User < ActiveRecord::Base
 	has_many :borrows, :dependent => :destroy
-	has_many :books, :through => :borrow
+	has_many :books, :through => :borrows
 	attr_accessible :name, :email, :password, :password_confirmation
 	EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	attr_accessor :password
-
 	validates_presence_of :name, :email   #it is just a method :name is argument
 	validates_length_of :name, :maximum => 50
 	validates_format_of   :email, :with => EmailRegex

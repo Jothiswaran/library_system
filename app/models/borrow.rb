@@ -1,9 +1,12 @@
 class Borrow < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :book
-	
-	def self.returnbook(user_id)
-		find(:all, :select => 'book_id', :conditions => ['user_id LIKE ? and returned = ?', "%#{user_id}%",false])
-	end
 
+	named_scope :issued, :conditions => { :returned => false}
+
+	named_scope :pendingreturn, { :conditions => [ "expected_return_date > ? and returned = ?", Date.today, 0] }
+
+	def self.returnbook(id)
+		find(:all, :conditions => ['user_id = ? and returned = ?', id, 0])
+	end
 end

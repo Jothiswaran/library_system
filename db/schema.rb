@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150820120819) do
+ActiveRecord::Schema.define(:version => 20150826081000) do
 
   create_table "books", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20150820120819) do
     t.integer  "book_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "expected_return_date"
   end
 
   add_index "borrows", ["book_id"], :name => "index_borrows_on_book_id"

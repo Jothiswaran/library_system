@@ -11,6 +11,8 @@ gem "chunky_png"
 
 gem "test-unit", '1.2.3'
 
+gem 'actionmailer', '~> 4.2.4'
+
 group :test do
   # gem "cucumber", "0.10.2"
   # gem "aruba",    "0.3.6"

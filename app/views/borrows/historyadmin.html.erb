@@ -1,0 +1,27 @@
+<table border ="0" cellspacing="20">
+<tr align ="left">
+<th>User ID </th>
+<th >User Name</th>
+<th >Book Name </th>
+<th>Author Name </th>
+<th>Borrow date </th>
+<th>Returned</th>
+<th>Returned/Expected Returned Date</th>
+</tr>
+<% @unreturned.each do |instance| %>
+<td> <%= instance.user.id %></td>
+<td > <%= instance.user.name %></td>
+<td > <%= instance.book.name %></td>
+<td> <%= instance.book.author %></td>
+<td> <%= instance.borrow_date %></td>
+<% if instance.returned %>
+<td> Yes </td>
+<td> <%= instance.return_date %> </td>
+<% else %>
+<td> No </td>
+<td> <%= instance.expected_return_date %> </td>
+<% end %>
+</tr>
+<% end %>
+</table>
+ 

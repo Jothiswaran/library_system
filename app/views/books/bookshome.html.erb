@@ -6,11 +6,37 @@
 			<% end %>
 			<li><%= link_to "Search Books", searchbooks_path %></li>
 			<% if !current_user.admin? %>
-				<li><%= link_to "Return Books", returnbooks_path %></li>
-			<% end %> 
-
+				<li><%= link_to "Return or Renew Books", returnbooks_path %></li>
+				<li> <%= link_to "History of Renewals and Returns", historyuser_path %> </li>
+			<% end %>
+			<% if current_user.admin? %>
+				<li> <%= link_to "History of Renewals and Returns", historyadmin_path %> </li> 
+			<% end %>
 		<% end %>
 	</ul>
-	<br>
-	<br>
+	<% if current_user.admin? %>
+		<br><br>
+		<h3>Send email to the users who have crossed the renewal date.</h3>
+		<% form_tag bookshome_path, :method => 'get' do %>
+		<%= submit_tag "Sent email", :name=>'sentemail' %>
+		<% end %>
+	<table class="users" cellspacing="20">
+    <tr align="left">
+    <th> ID </th>
+    <th> &nbsp&nbsp&nbsp Name </th>
+    </tr>
+  	<% @usr.each do |user| %>
+    <tr>
+      <td>
+      <%= user.id %>
+      <td>
+        &nbsp&nbsp&nbsp
+        <%= link_to h(user.name), user %>
+      </td>
+   <% end %> 
+    </tr>
+</table>
+<br>
+<br>
+<% end %>
 </div>

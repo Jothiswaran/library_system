@@ -3,14 +3,14 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :books
 
-  map.resources :books
+  # map.resources :books
 
   map.resources :users
 
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.signin '/signin', :controller => 'sessions', :action => 'new' 
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
-
+  
   map.root :controller => 'pages', :action => 'home'
   map.contact '/contact', :controller => 'pages', :action => 'contact'
   map.about   '/about',   :controller => 'pages', :action => 'about'
@@ -27,8 +27,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.issue '/issue', :controller => 'borrows', :action => 'issue'
   map.returnbooks '/returnbooks', :controller => 'borrows', :action => 'returnbooks'
-  map.returnlibrary '/returnlibrary', :controller => 'borrows', :action => 'returnlibrary'
+  map.historyuser '/historyuser', :controller => 'borrows', :action => 'historyuser'
+  map.historyadmin '/historyadmin', :controller => 'borrows', :action => 'historyadmin'
 
+  map.returnlibrary '/returnlibrary', :controller => 'borrows', :action => 'returnlibrary'
+  map.renewlibrary '/renewlibrary', :controller => 'borrows', :action => 'renewlibrary'
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

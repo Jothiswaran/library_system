@@ -1,8 +1,9 @@
 class BorrowsController < ApplicationController
-
+  before_filter :authenticate
+  
   def issue
     @borrow=Borrow.new(:borrow_date=>Date.today, :return_date => '', :returned =>false,
-                  :user_id => current_user[:id], :book_id => params[:book_id]);
+                  :user_id => current_user[:id], :book_id => params[:book_id], :expected_return_date => Date.today+10);
     if @borrow.save
       params[:id]=params[:book_id]
       Book.update(params[:id])
@@ -10,12 +11,13 @@ class BorrowsController < ApplicationController
   end
 
   def returnbooks
+
     returns = Borrow.returnbook(current_user[:id])
-    rbooks = []
-    returns.each do |temp|
-        rbooks << temp[:book_id]
-    end
-    @returnbooks = Book.find(rbooks)
+    @returnbooks=[]
+        returns.each do |temp|
+       @returnbooks << temp
+   end
+
   end
 
   def returnlibrary
@@ -27,4 +29,25 @@ class BorrowsController < ApplicationController
       b.returned = true
       b.save
   end
+
+  def renewlibrary
+      b = Borrow.find_by_book_id(params[:book_id])
+      b.expected_return_date = Date.today+10
+      b.save
+  end
+
+  def historyuser
+    @history = []
+    Borrow.find(:all, :include => [:user, :book], :conditions => ['user_id = ?', current_user.id]).each do |temp|
+      @history << temp
+    end
+  end
+
+  def historyadmin
+    @unreturned = []
+    Borrow.find(:all, :include => [:user, :book]).each do |temp| 
+      @unreturned << temp
+    end
+  end
+
 end

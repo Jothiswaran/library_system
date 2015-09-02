@@ -9,22 +9,26 @@ There are no books to be returned
     <th>ID</th>
     <th>BookName</th>
     <th>AuthorName</th>
+    <th>Operation</th>
   </tr>
-  <% @returnbooks.each do |book| %>
+  <% @returnbooks.each do |b| %>
     <tr>
       <td>
-        <%= book.id %>
+        <%= b.book.id %>
       </td>
       <td>
-        <%= book.name %>
+        <%= b.book.name %>
       </td>
       <td>
-        <%= book.author %>
+        <%= b.book.author %>
       </td>
       <td>
-        <%= link_to "return", returnlibrary_path(:book_id => book.id) %>
+        <%= link_to "return", returnlibrary_path(:book_id => b.book.id) %>   |  <%= link_to "renew", renewlibrary_path(:book_id => b.book.id) %> 
       </td>
     </tr>
   <% end %> 
 </table>
 <% end %>
+<br>
+<br>
+<b><%= link_to "Library Home", bookshome_path %></b>

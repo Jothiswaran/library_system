@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+You have crossed the renewal date for your book. Please renew it.	
+	</head>
+	<body>
+
+<table border ="1">
+<% @book.each do |b| %>
+<tr>
+<th> Book ID </th>
+<th> Book Name </th>
+<th> Author Name </th>
+</tr>
+<tr>
+<td><%= b.id %> </td>
+<td>     <%= b.name %> </td>
+<td>     <%= b.author %> </td>
+<td> </td>
+</tr>
+
+<% end %>
+</table>
+</body>
+</html>

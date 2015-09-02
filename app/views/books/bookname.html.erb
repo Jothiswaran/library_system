@@ -1,6 +1,6 @@
 <% if !@searchresults.empty? %>
-<table border="1" style="width:100%">
-<tr>
+<table border="0" cellspacing="20">
+<tr align="left">
     <th>
         ID
     </th>
@@ -12,6 +12,9 @@
     </th>
     <th>
         Availability
+    </th>
+    <th>
+    Operation
     </th>
   </tr>
 <% @searchresults.each do |search| %>
@@ -46,3 +49,6 @@
 <% else %>
 <p> No Matching Books are found.</p>
 <% end %>
+<br>
+<br>
+<b><%= link_to "Library Home", bookshome_path %></b>
