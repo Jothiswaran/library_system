@@ -17,6 +17,10 @@
     <%= f.label :password_confirmation, "Confirmation" %><br />
     <%= f.password_field :password_confirmation %> 
   </div>
+  <div class="field">
+  <%= f.label :library_id, "Library Name" %><br/>
+  <%= f.collection_select(:library_id, Library.all, :id, :name) %>
+  </div>
   <div class="actions">
   <%= f.submit "Sign up" %>
   </div> 

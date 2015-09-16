@@ -46,7 +46,7 @@ class BorrowsController < ApplicationController
   def historyadmin
     @unreturned = []
     Borrow.find(:all, :include => [:user, :book]).each do |temp| 
-      @unreturned << temp
+      @unreturned << temp if (temp.user.library_id==current_user.library_id)
     end
   end
 

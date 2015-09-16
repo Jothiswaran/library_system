@@ -1,13 +1,17 @@
 class UsersController < ApplicationController
-  before_filter :authenticate #, :only => [:edit, :update]
+  before_filter :authenticate , :only => [:edit, :update, :show, :index]
   before_filter :correct_user, :only => [:edit, :update]
   # GET /users
   # GET /users.xml
   def index
     @title = "All users"
-    @users = User.all
+    @users = User.findAll(current_user.library_id)
   end
 
+  #def search
+  #  @usrs = User.tire.search params[:q]
+  #  render :action => "index1"
+  #end
   # GET /users/1
   # GET /users/1.xml
   def show
@@ -24,6 +28,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @title = "Sign up"
+    @libraries=Library.findLibrary
   end
 
   # GET /users/1/edit

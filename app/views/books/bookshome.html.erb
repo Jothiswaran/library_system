@@ -1,6 +1,13 @@
+	<% if current_user.superadmin? %>
+		<div>
+			<ul>
+				<li><%= link_to "Add Library", add_path %></li>
+				<li><%= link_to "List of all Libraries", show_path %></li>
+			</ul>
+		</div>
+	<% else %>
 <div class="books"> 
 	<ul>
-		<% if signed_in? %>
 			<% if current_user.admin? %>
 				<li><%= link_to "Add Books to Library", addbooks_path %></li>
 			<% end %>
@@ -12,7 +19,6 @@
 			<% if current_user.admin? %>
 				<li> <%= link_to "History of Renewals and Returns", historyadmin_path %> </li> 
 			<% end %>
-		<% end %>
 	</ul>
 	<% if current_user.admin? %>
 		<br><br>
@@ -40,3 +46,4 @@
 <br>
 <% end %>
 </div>
+<% end %>

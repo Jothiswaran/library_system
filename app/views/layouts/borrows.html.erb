@@ -10,7 +10,11 @@
 <div class ='container'>
 <%= render 'layouts/header' %>
 </div>
-<h1>Library Management System</h1>
+<% if signed_in? %>
+	<h1>Welcome to <%= current_user.library.name %> </h1>
+<% else %>
+	<h1>Library Management System</h1>
+<% end %>
 
 <%= yield %>
 

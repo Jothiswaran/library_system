@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150826081000) do
+ActiveRecord::Schema.define(:version => 20150903062749) do
 
   create_table "books", :force => true do |t|
     t.string   "name"
@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20150826081000) do
     t.boolean  "available"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "library_id"
   end
 
   create_table "borrows", :force => true do |t|
@@ -33,6 +34,14 @@ ActiveRecord::Schema.define(:version => 20150826081000) do
   add_index "borrows", ["book_id"], :name => "index_borrows_on_book_id"
   add_index "borrows", ["user_id"], :name => "index_borrows_on_user_id"
 
+  create_table "libraries", :force => true do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -42,6 +51,8 @@ ActiveRecord::Schema.define(:version => 20150826081000) do
     t.string   "salt"
     t.string   "remember_token"
     t.boolean  "admin"
+    t.integer  "library_id"
+    t.boolean  "superadmin"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

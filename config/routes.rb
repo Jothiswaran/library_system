@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   # map.resources :books
 
   map.resources :users
-
+  map.resources :libraries
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.signin '/signin', :controller => 'sessions', :action => 'new' 
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
@@ -18,6 +18,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.signup '/signup', :controller => 'users', :action => 'new'
 
+
+  map.add '/add', :controller => 'libraries', :action => 'new'
+  map.show '/show', :controller => 'libraries', :action => 'show'
 
   map.bookshome '/bookshome', :controller => 'books', :action => 'bookshome'
   map.addbooks  '/addbooks', :controller => 'books', :action => 'addbooks'

@@ -1,0 +1,20 @@
+<h2>Add Library</h2>
+<% form_for(@library) do |f| %> 
+  <div class="field">
+    <%= f.label :name , "Name" %><br />
+    <%= f.text_field :name %> 
+  </div>
+  <div class="field">
+    <%= f.label :city, "City" %><br /> 
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :phone, "Phone" %><br /> 
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="actions">
+  <%= f.submit "Add Library" %>
+  </div> 
+<% end %>
+<b><%= link_to "Library Home", bookshome_path %></b>

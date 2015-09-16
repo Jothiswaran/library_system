@@ -1,8 +1,13 @@
 require 'digest'
 class User < ActiveRecord::Base
+
+#	include Tire::Model::Search
+#	include Tire::Model::Callbacks
+
 	has_many :borrows, :dependent => :destroy
 	has_many :books, :through => :borrows
-	attr_accessible :name, :email, :password, :password_confirmation
+	belongs_to :library
+	attr_accessible :name, :email, :password, :password_confirmation, :library_id
 	EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	attr_accessor :password
 	validates_presence_of :name, :email   #it is just a method :name is argument
@@ -13,6 +18,8 @@ class User < ActiveRecord::Base
 	validates_presence_of :password
 	validates_length_of :password, :within => 6..40
 	before_save :encrypt_password
+
+	named_scope :findAll,  lambda { |libraryid| {:conditions => ['library_id = ?', "#{libraryid}" ] } }
 
 	def has_password?(submitted_password)
 		encrypted_password == encrypt(submitted_password)
