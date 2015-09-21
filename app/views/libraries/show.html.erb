@@ -5,11 +5,11 @@
 <th>City </th>
 <th>Phone</th>
 </tr>
-<% @libraries.each do |instance| %>
-<td> <%= instance.id %> </td>
-<td> <%= instance.name %></td>
-<td> <%= instance.city %></td>
-<td> <%= instance.phone %></td>
+<% @libraries.each do |insts| %>
+<td> <%= insts.id %> </td>
+<td> <%= insts.name %></td>
+<td> <%= insts.city %></td>
+<td> <%= insts.phone %></td>
 </tr>
 <% end %>
 </table>
