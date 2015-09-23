@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 before_filter :authenticate
 
-def bookshome
+def index
     @borrowed = Borrow.pendingreturn
     @usr =[]
     @borrowed.each do |temp|
@@ -18,6 +18,12 @@ def addbooks
   @book=Book.new
 end
 
+def new
+  @book=Book.new
+#  render :text => '<p>hai</p>'
+#  render :partial => "new"
+end
+
 def destroy
   Book.find(params[:id]).destroy
   redirect_to searchbooks_path
@@ -29,7 +35,7 @@ def create
   @book = Book.new(params[:book])
   if @book.save
     flash[:notice] = "You have successfully added a book"
-    redirect_to bookshome_path
+    redirect_to books_path
   else
     render 'addbooks'
   end
@@ -48,7 +54,8 @@ def bookname
   else
      @searchresults = Book.find(:all)
   end
-end  
+end 
+
 
 def allbooks
   @book=Book.findBook(current_user.library_id)

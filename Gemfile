@@ -8,19 +8,22 @@ gem "mysql2", "0.2.23"
 
 gem "colored"
 gem "chunky_png"
-
+gem 'gravatar'
+gem 'prototype-rails', '3.2.0'
 #gem 'pry'
 #gem 'pry-byebug'
 
 gem 'debugger', '~>1.6.8'
 gem "test-unit", '1.2.3'
+gem "paperclip", "~> 2.0"
+gem 'actionmailer'
 
-gem 'actionmailer', '~> 4.2.4'
+#gem 'elasticsearch-model' '0.1.7'
+#gem 'elasticsearch-rails', '0.1.7'
 
-#gem 'elasticsearch', '~> 0.90.1'
-#gem 'tire'
-#gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
-#gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+#gem 'elasticsearch', '0.90.0'
+gem 'tire'
+
 
 group :test do
   # gem "cucumber", "0.10.2"

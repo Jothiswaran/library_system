@@ -1,9 +1,12 @@
 require 'digest'
+require 'tire'
 class User < ActiveRecord::Base
 
-#	include Tire::Model::Search
-#	include Tire::Model::Callbacks
-
+	#include Tire::Model::Search
+	#include Tire::Model::Callbacks
+#	include Elasticsearsch::Model
+#	include Elasticsearch::Model::Callbacks
+	
 	has_many :borrows, :dependent => :destroy
 	has_many :books, :through => :borrows
 	belongs_to :library
@@ -52,5 +55,4 @@ class User < ActiveRecord::Base
 	def secure_hash(string) 
 		Digest::SHA2.hexdigest(string)
 	end
-
 end

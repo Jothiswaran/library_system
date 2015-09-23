@@ -1,0 +1,16 @@
+<table border ="0" cellspacing="20">
+<tr align ="left">
+<th>Library ID </th>
+<th >Library Name </th>
+<th>City </th>
+<th>Phone</th>
+</tr>
+<% @libraries.each do |ists| %>
+<td> <%= ists.id %> </td>
+<td> <%= ists.name %></td>
+<td> <%= ists.city %></td>
+<td> <%= ists.phone %></td>
+</tr>
+<% end %>
+</table>
+ 

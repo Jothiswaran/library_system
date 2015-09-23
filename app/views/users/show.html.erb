@@ -1,3 +1,5 @@
+<div align="right" style="width:100px;height:100px;position:absolute;left:600px;top:100px;"><%= gravatar_for @user %>
+</div>
 <table class="profile"> 
 	<tr>
 		<td class="main"> 
@@ -19,7 +21,7 @@
 				<tr>
 					<td>
 						<strong>Email id</strong> </td><td>: <%= h @user.email %>
-					</td>
+					</td> 
 				</tr>
 			</table> 
 		</td>
@@ -27,4 +29,4 @@
 </table>
 <br>
 <br>
-<b><%= link_to "Library Section", bookshome_path %></b>	
+<b><%= link_to "Library Section", books_path %></b>

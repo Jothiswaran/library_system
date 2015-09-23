@@ -2,9 +2,10 @@
 <%= text_field_tag :search ,params[:search]%>
 <br>
 <br>
-<%= submit_tag "ByAuthor", :name=>'button1' %>
+ <%= submit_tag "ByAuthor", :name=>'button1' %>
 <%= submit_tag "ByBook", :name=>'button2' %>
 <% end %>
+<div id="searchresult">
 <h2 align="center">
 List of available books in the library
 </h1>
@@ -40,7 +41,8 @@ List of available books in the library
 <% end %>
 <br>
 <br>
-<%= link_to "List of all books", allbooks_path, remote: true %>
+<%= link_to "List of all books", allbooks_path %>
 <br>
 <br>
-<b><%= link_to "Library Home", bookshome_path %></b>
+<b><%= link_to "Library Home", books_path %></b>
+</div>

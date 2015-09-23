@@ -2,19 +2,21 @@ class LibrariesController < ApplicationController
 
 	def new
 		@library = Library.new
+    render :partial => "new"
 	end
 
 	def create
       @library = Library.new(params[:library]) 
       if @library.save
         flash[:notice] = "Library was added"
-        redirect_to add_path
+        redirect_to books_path
       else
-        render 'new' 
+         redirect_to books_path
       end
   end
   def show
       @libraries=Library.findLibrary
+      render :partial => "show"
   end
 
 end

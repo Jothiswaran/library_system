@@ -22,8 +22,8 @@ ActionController::Routing::Routes.draw do |map|
   map.add '/add', :controller => 'libraries', :action => 'new'
   map.show '/show', :controller => 'libraries', :action => 'show'
 
-  map.bookshome '/bookshome', :controller => 'books', :action => 'bookshome'
   map.addbooks  '/addbooks', :controller => 'books', :action => 'addbooks'
+  map.addb  '/addb', :controller => 'books', :action => 'add'
   map.searchbooks  '/searchbooks', :controller => 'books', :action => 'searchbooks'
   map.bookname '/bookname', :controller => 'books', :action => 'bookname'
   map.allbooks '/allbooks', :controller => 'books', :action => 'allbooks'

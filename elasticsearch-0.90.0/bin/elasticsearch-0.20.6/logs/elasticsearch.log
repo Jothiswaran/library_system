@@ -1,0 +1,14 @@
+[2015-09-23 19:53:22,759][INFO ][node                     ] [Iron Maiden] {0.20.6}[6216]: initializing ...
+[2015-09-23 19:53:22,764][INFO ][plugins                  ] [Iron Maiden] loaded [], sites []
+[2015-09-23 19:53:25,413][INFO ][node                     ] [Iron Maiden] {0.20.6}[6216]: initialized
+[2015-09-23 19:53:25,413][INFO ][node                     ] [Iron Maiden] {0.20.6}[6216]: starting ...
+[2015-09-23 19:53:25,554][INFO ][transport                ] [Iron Maiden] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.4.130:9300]}
+[2015-09-23 19:53:28,705][INFO ][cluster.service          ] [Iron Maiden] new_master [Iron Maiden][5KCUGGNvTTeh4l9wk7frJg][inet[/192.168.4.130:9300]], reason: zen-disco-join (elected_as_master)
+[2015-09-23 19:53:29,081][INFO ][discovery                ] [Iron Maiden] elasticsearch/5KCUGGNvTTeh4l9wk7frJg
+[2015-09-23 19:53:29,102][INFO ][http                     ] [Iron Maiden] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.4.130:9200]}
+[2015-09-23 19:53:29,102][INFO ][node                     ] [Iron Maiden] {0.20.6}[6216]: started
+[2015-09-23 19:53:29,168][INFO ][gateway                  ] [Iron Maiden] recovered [0] indices into cluster_state
+[2015-09-23 19:54:14,377][INFO ][node                     ] [Iron Maiden] {0.20.6}[6216]: stopping ...
+[2015-09-23 19:54:14,432][INFO ][node                     ] [Iron Maiden] {0.20.6}[6216]: stopped
+[2015-09-23 19:54:14,432][INFO ][node                     ] [Iron Maiden] {0.20.6}[6216]: closing ...
+[2015-09-23 19:54:14,495][INFO ][node                     ] [Iron Maiden] {0.20.6}[6216]: closed

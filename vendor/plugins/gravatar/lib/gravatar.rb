@@ -17,7 +17,7 @@ module GravatarHelper
     :default => nil,
     
     # The default size in pixels for the gravatar image (they're square).
-    :size => 50,
+    :size => 100,
     
     # The maximum allowed MPAA rating for gravatars. This allows you to 
     # exclude gravatars that may be out of character for your site.
@@ -48,7 +48,7 @@ module GravatarHelper
     # the given user object will respond_to "email", and return the user's
     # email address.
     def gravatar_for(user, options={})
-      gravatar(user.email, options)
+      gravatar(user.email, options).html_safe
     end
 
     # Return the HTML img tag for the given email address's gravatar.
@@ -57,12 +57,13 @@ module GravatarHelper
       options.reverse_merge!(DEFAULT_OPTIONS)
       size = options.delete(:size)
       size = "#{size}px" if size.is_a?(Integer)
-      if options.delete(:fast)
-        options[:style] = "width:#{size};height:#{size};background:url(#{src}) no-repeat;"
-        content_tag :div, options
-      else
+
+      #if options.delete(:fast)
+      #  options[:style] = "width:#{size};height:#{size};background:url(#{src}) no-repeat;"
+      #  content_tag :div, options
+      #else
          image_tag src, options.merge(:width => size, :height => size)
-      end
+      #end
     end
     
     # Returns the base Gravatar URL for the given email hash. If ssl evaluates to true,
@@ -92,7 +93,6 @@ module GravatarHelper
         url << "?#{opts.join('&')}" unless opts.empty?
       end
     end
-
   end
   
 end

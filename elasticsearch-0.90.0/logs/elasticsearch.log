@@ -1,0 +1,233 @@
+[2015-09-22 10:38:00,717][INFO ][node                     ] [Man-Bull] {0.90.0}[29829]: initializing ...
+[2015-09-22 10:38:00,737][INFO ][plugins                  ] [Man-Bull] loaded [], sites []
+[2015-09-22 10:38:07,120][INFO ][node                     ] [Man-Bull] {0.90.0}[29829]: initialized
+[2015-09-22 10:38:07,121][INFO ][node                     ] [Man-Bull] {0.90.0}[29829]: starting ...
+[2015-09-22 10:38:07,604][INFO ][transport                ] [Man-Bull] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.4.130:9300]}
+[2015-09-22 10:38:11,004][INFO ][cluster.service          ] [Man-Bull] new_master [Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]], reason: zen-disco-join (elected_as_master)
+[2015-09-22 10:38:11,566][INFO ][discovery                ] [Man-Bull] elasticsearch/R2B7WGsbRUeLlL63-xg4xQ
+[2015-09-22 10:38:11,660][INFO ][http                     ] [Man-Bull] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.4.130:9200]}
+[2015-09-22 10:38:11,660][INFO ][node                     ] [Man-Bull] {0.90.0}[29829]: started
+[2015-09-22 10:38:12,079][INFO ][gateway                  ] [Man-Bull] recovered [0] indices into cluster_state
+[2015-09-22 10:38:16,878][WARN ][discovery.zen.ping.multicast] [Man-Bull] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 10:38:18,328][WARN ][discovery.zen.ping.multicast] [Man-Bull] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 10:38:19,850][WARN ][discovery.zen.ping.multicast] [Man-Bull] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 11:08:58,628][INFO ][node                     ] [Power Broker] {0.90.0}[30142]: initializing ...
+[2015-09-22 11:08:58,659][INFO ][plugins                  ] [Power Broker] loaded [], sites []
+[2015-09-22 11:09:00,745][INFO ][node                     ] [Caber] {0.90.0}[30149]: initializing ...
+[2015-09-22 11:09:00,752][INFO ][plugins                  ] [Caber] loaded [], sites []
+[2015-09-22 11:09:03,745][INFO ][node                     ] [Caber] {0.90.0}[30149]: initialized
+[2015-09-22 11:09:03,745][INFO ][node                     ] [Caber] {0.90.0}[30149]: starting ...
+[2015-09-22 11:09:03,746][INFO ][node                     ] [Power Broker] {0.90.0}[30142]: initialized
+[2015-09-22 11:09:03,746][INFO ][node                     ] [Power Broker] {0.90.0}[30142]: starting ...
+[2015-09-22 11:09:04,116][INFO ][transport                ] [Caber] bound_address {inet[/0:0:0:0:0:0:0:0:9301]}, publish_address {inet[/192.168.4.130:9301]}
+[2015-09-22 11:09:04,117][INFO ][transport                ] [Power Broker] bound_address {inet[/0:0:0:0:0:0:0:0:9302]}, publish_address {inet[/192.168.4.130:9302]}
+[2015-09-22 11:09:07,410][INFO ][cluster.service          ] [Man-Bull] added {[Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]],}, reason: zen-disco-receive(join from node[[Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]]])
+[2015-09-22 11:09:07,416][INFO ][cluster.service          ] [Man-Bull] added {[Caber][LLyev40cSCyohPE-YY5ggA][inet[/192.168.4.130:9301]],}, reason: zen-disco-receive(join from node[[Caber][LLyev40cSCyohPE-YY5ggA][inet[/192.168.4.130:9301]]])
+[2015-09-22 11:09:07,435][INFO ][cluster.service          ] [Power Broker] detected_master [Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]], added {[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:09:07,435][INFO ][cluster.service          ] [Caber] detected_master [Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]], added {[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]],[Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:09:07,558][INFO ][discovery                ] [Power Broker] elasticsearch/pZCjGQV0THCCFZdVXzWAqw
+[2015-09-22 11:09:07,558][INFO ][cluster.service          ] [Power Broker] added {[Caber][LLyev40cSCyohPE-YY5ggA][inet[/192.168.4.130:9301]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:09:07,564][INFO ][discovery                ] [Caber] elasticsearch/LLyev40cSCyohPE-YY5ggA
+[2015-09-22 11:09:07,566][INFO ][http                     ] [Power Broker] bound_address {inet[/0:0:0:0:0:0:0:0:9201]}, publish_address {inet[/192.168.4.130:9201]}
+[2015-09-22 11:09:07,566][INFO ][node                     ] [Power Broker] {0.90.0}[30142]: started
+[2015-09-22 11:09:07,570][INFO ][http                     ] [Caber] bound_address {inet[/0:0:0:0:0:0:0:0:9202]}, publish_address {inet[/192.168.4.130:9202]}
+[2015-09-22 11:09:07,571][INFO ][node                     ] [Caber] {0.90.0}[30149]: started
+[2015-09-22 11:27:54,490][INFO ][node                     ] [Maddicks, Artie] {0.90.0}[30317]: initializing ...
+[2015-09-22 11:27:54,521][INFO ][plugins                  ] [Maddicks, Artie] loaded [], sites []
+[2015-09-22 11:27:58,923][INFO ][node                     ] [Maddicks, Artie] {0.90.0}[30317]: initialized
+[2015-09-22 11:27:58,924][INFO ][node                     ] [Maddicks, Artie] {0.90.0}[30317]: starting ...
+[2015-09-22 11:27:59,165][INFO ][transport                ] [Maddicks, Artie] bound_address {inet[/0:0:0:0:0:0:0:0:9303]}, publish_address {inet[/192.168.4.130:9303]}
+[2015-09-22 11:28:02,451][INFO ][cluster.service          ] [Man-Bull] added {[Maddicks, Artie][dEIYLrttSZ6AWBqKHiHaVQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(join from node[[Maddicks, Artie][dEIYLrttSZ6AWBqKHiHaVQ][inet[/192.168.4.130:9303]]])
+[2015-09-22 11:28:02,456][INFO ][cluster.service          ] [Power Broker] added {[Maddicks, Artie][dEIYLrttSZ6AWBqKHiHaVQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:28:02,459][INFO ][cluster.service          ] [Caber] added {[Maddicks, Artie][dEIYLrttSZ6AWBqKHiHaVQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:28:02,473][INFO ][cluster.service          ] [Maddicks, Artie] detected_master [Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]], added {[Caber][LLyev40cSCyohPE-YY5ggA][inet[/192.168.4.130:9301]],[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]],[Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:28:02,582][INFO ][discovery                ] [Maddicks, Artie] elasticsearch/dEIYLrttSZ6AWBqKHiHaVQ
+[2015-09-22 11:28:02,588][INFO ][http                     ] [Maddicks, Artie] bound_address {inet[/0:0:0:0:0:0:0:0:9203]}, publish_address {inet[/192.168.4.130:9203]}
+[2015-09-22 11:28:02,588][INFO ][node                     ] [Maddicks, Artie] {0.90.0}[30317]: started
+[2015-09-22 11:28:23,629][INFO ][node                     ] [Maddicks, Artie] {0.90.0}[30317]: stopping ...
+[2015-09-22 11:28:23,665][INFO ][cluster.service          ] [Man-Bull] removed {[Maddicks, Artie][dEIYLrttSZ6AWBqKHiHaVQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-node_left([Maddicks, Artie][dEIYLrttSZ6AWBqKHiHaVQ][inet[/192.168.4.130:9303]])
+[2015-09-22 11:28:23,667][INFO ][cluster.service          ] [Power Broker] removed {[Maddicks, Artie][dEIYLrttSZ6AWBqKHiHaVQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:28:23,668][INFO ][cluster.service          ] [Caber] removed {[Maddicks, Artie][dEIYLrttSZ6AWBqKHiHaVQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:28:23,698][INFO ][node                     ] [Maddicks, Artie] {0.90.0}[30317]: stopped
+[2015-09-22 11:28:23,698][INFO ][node                     ] [Maddicks, Artie] {0.90.0}[30317]: closing ...
+[2015-09-22 11:28:23,706][INFO ][node                     ] [Maddicks, Artie] {0.90.0}[30317]: closed
+[2015-09-22 11:28:25,007][INFO ][node                     ] [Xi'an Chi Xan] {0.90.0}[30327]: initializing ...
+[2015-09-22 11:28:25,013][INFO ][plugins                  ] [Xi'an Chi Xan] loaded [], sites []
+[2015-09-22 11:28:26,887][INFO ][node                     ] [Xi'an Chi Xan] {0.90.0}[30327]: initialized
+[2015-09-22 11:28:26,887][INFO ][node                     ] [Xi'an Chi Xan] {0.90.0}[30327]: starting ...
+[2015-09-22 11:28:26,990][INFO ][transport                ] [Xi'an Chi Xan] bound_address {inet[/0:0:0:0:0:0:0:0:9303]}, publish_address {inet[/192.168.4.130:9303]}
+[2015-09-22 11:28:30,060][INFO ][cluster.service          ] [Man-Bull] added {[Xi'an Chi Xan][tadTqhPPSK-CSACW5uLV_A][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(join from node[[Xi'an Chi Xan][tadTqhPPSK-CSACW5uLV_A][inet[/192.168.4.130:9303]]])
+[2015-09-22 11:28:30,062][INFO ][cluster.service          ] [Caber] added {[Xi'an Chi Xan][tadTqhPPSK-CSACW5uLV_A][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:28:30,062][INFO ][cluster.service          ] [Power Broker] added {[Xi'an Chi Xan][tadTqhPPSK-CSACW5uLV_A][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:28:30,069][INFO ][cluster.service          ] [Xi'an Chi Xan] detected_master [Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]], added {[Caber][LLyev40cSCyohPE-YY5ggA][inet[/192.168.4.130:9301]],[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]],[Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:28:30,133][INFO ][discovery                ] [Xi'an Chi Xan] elasticsearch/tadTqhPPSK-CSACW5uLV_A
+[2015-09-22 11:28:30,139][INFO ][http                     ] [Xi'an Chi Xan] bound_address {inet[/0:0:0:0:0:0:0:0:9203]}, publish_address {inet[/192.168.4.130:9203]}
+[2015-09-22 11:28:30,140][INFO ][node                     ] [Xi'an Chi Xan] {0.90.0}[30327]: started
+[2015-09-22 11:33:28,017][INFO ][node                     ] [Xi'an Chi Xan] {0.90.0}[30327]: stopping ...
+[2015-09-22 11:33:28,096][INFO ][cluster.service          ] [Man-Bull] removed {[Xi'an Chi Xan][tadTqhPPSK-CSACW5uLV_A][inet[/192.168.4.130:9303]],}, reason: zen-disco-node_left([Xi'an Chi Xan][tadTqhPPSK-CSACW5uLV_A][inet[/192.168.4.130:9303]])
+[2015-09-22 11:33:28,098][INFO ][cluster.service          ] [Power Broker] removed {[Xi'an Chi Xan][tadTqhPPSK-CSACW5uLV_A][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:33:28,098][INFO ][cluster.service          ] [Caber] removed {[Xi'an Chi Xan][tadTqhPPSK-CSACW5uLV_A][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:33:28,154][INFO ][node                     ] [Xi'an Chi Xan] {0.90.0}[30327]: stopped
+[2015-09-22 11:33:28,154][INFO ][node                     ] [Xi'an Chi Xan] {0.90.0}[30327]: closing ...
+[2015-09-22 11:33:28,228][INFO ][node                     ] [Xi'an Chi Xan] {0.90.0}[30327]: closed
+[2015-09-22 11:40:54,364][INFO ][node                     ] [Aralune] {0.90.0}[30491]: initializing ...
+[2015-09-22 11:40:54,424][INFO ][plugins                  ] [Aralune] loaded [], sites []
+[2015-09-22 11:41:01,371][INFO ][node                     ] [Aralune] {0.90.0}[30491]: initialized
+[2015-09-22 11:41:01,372][INFO ][node                     ] [Aralune] {0.90.0}[30491]: starting ...
+[2015-09-22 11:41:01,999][INFO ][transport                ] [Aralune] bound_address {inet[/0:0:0:0:0:0:0:0:9303]}, publish_address {inet[/192.168.4.130:9303]}
+[2015-09-22 11:41:05,425][INFO ][cluster.service          ] [Man-Bull] added {[Aralune][kKV2R1gJRa2MCDv4MHVcBQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(join from node[[Aralune][kKV2R1gJRa2MCDv4MHVcBQ][inet[/192.168.4.130:9303]]])
+[2015-09-22 11:41:05,428][INFO ][cluster.service          ] [Caber] added {[Aralune][kKV2R1gJRa2MCDv4MHVcBQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:41:05,430][INFO ][cluster.service          ] [Power Broker] added {[Aralune][kKV2R1gJRa2MCDv4MHVcBQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:41:05,448][INFO ][cluster.service          ] [Aralune] detected_master [Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]], added {[Caber][LLyev40cSCyohPE-YY5ggA][inet[/192.168.4.130:9301]],[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]],[Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:41:05,586][INFO ][discovery                ] [Aralune] elasticsearch/kKV2R1gJRa2MCDv4MHVcBQ
+[2015-09-22 11:41:05,594][INFO ][http                     ] [Aralune] bound_address {inet[/0:0:0:0:0:0:0:0:9203]}, publish_address {inet[/192.168.4.130:9203]}
+[2015-09-22 11:41:05,594][INFO ][node                     ] [Aralune] {0.90.0}[30491]: started
+[2015-09-22 11:44:55,505][INFO ][node                     ] [Aralune] {0.90.0}[30491]: stopping ...
+[2015-09-22 11:44:55,512][INFO ][cluster.service          ] [Man-Bull] removed {[Aralune][kKV2R1gJRa2MCDv4MHVcBQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-node_left([Aralune][kKV2R1gJRa2MCDv4MHVcBQ][inet[/192.168.4.130:9303]])
+[2015-09-22 11:44:55,514][INFO ][cluster.service          ] [Caber] removed {[Aralune][kKV2R1gJRa2MCDv4MHVcBQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:44:55,514][INFO ][cluster.service          ] [Power Broker] removed {[Aralune][kKV2R1gJRa2MCDv4MHVcBQ][inet[/192.168.4.130:9303]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:44:55,529][INFO ][node                     ] [Aralune] {0.90.0}[30491]: stopped
+[2015-09-22 11:44:55,530][INFO ][node                     ] [Aralune] {0.90.0}[30491]: closing ...
+[2015-09-22 11:44:55,537][INFO ][node                     ] [Aralune] {0.90.0}[30491]: closed
+[2015-09-22 11:45:39,852][INFO ][cluster.service          ] [Man-Bull] removed {[Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]],}, reason: zen-disco-node_failed([Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]]), reason transport disconnected (with verified connect)
+[2015-09-22 11:45:39,854][INFO ][cluster.service          ] [Caber] removed {[Power Broker][pZCjGQV0THCCFZdVXzWAqw][inet[/192.168.4.130:9302]],}, reason: zen-disco-receive(from master [[Man-Bull][R2B7WGsbRUeLlL63-xg4xQ][inet[/192.168.4.130:9300]]])
+[2015-09-22 11:45:42,791][INFO ][cluster.service          ] [Man-Bull] removed {[Caber][LLyev40cSCyohPE-YY5ggA][inet[/192.168.4.130:9301]],}, reason: zen-disco-node_failed([Caber][LLyev40cSCyohPE-YY5ggA][inet[/192.168.4.130:9301]]), reason transport disconnected (with verified connect)
+[2015-09-22 11:46:01,838][INFO ][node                     ] [Sunstroke] {0.90.0}[30635]: initializing ...
+[2015-09-22 11:46:01,846][INFO ][plugins                  ] [Sunstroke] loaded [], sites []
+[2015-09-22 11:46:03,746][INFO ][node                     ] [Sunstroke] {0.90.0}[30635]: initialized
+[2015-09-22 11:46:03,746][INFO ][node                     ] [Sunstroke] {0.90.0}[30635]: starting ...
+[2015-09-22 11:46:03,841][INFO ][transport                ] [Sunstroke] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.4.130:9300]}
+[2015-09-22 11:46:06,879][INFO ][cluster.service          ] [Sunstroke] new_master [Sunstroke][GsXIdDlETVSqCiTS4iweMQ][inet[/192.168.4.130:9300]], reason: zen-disco-join (elected_as_master)
+[2015-09-22 11:46:06,973][INFO ][discovery                ] [Sunstroke] elasticsearch/GsXIdDlETVSqCiTS4iweMQ
+[2015-09-22 11:46:06,986][INFO ][http                     ] [Sunstroke] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.4.130:9200]}
+[2015-09-22 11:46:06,986][INFO ][node                     ] [Sunstroke] {0.90.0}[30635]: started
+[2015-09-22 11:46:07,071][INFO ][gateway                  ] [Sunstroke] recovered [0] indices into cluster_state
+[2015-09-22 14:03:27,323][INFO ][node                     ] [userdata] {0.90.0}[31326]: initializing ...
+[2015-09-22 14:03:27,339][INFO ][plugins                  ] [userdata] loaded [], sites []
+[2015-09-22 14:03:29,173][INFO ][node                     ] [userdata] {0.90.0}[31326]: initialized
+[2015-09-22 14:03:29,174][INFO ][node                     ] [userdata] {0.90.0}[31326]: starting ...
+[2015-09-22 14:03:29,276][INFO ][transport                ] [userdata] bound_address {inet[/0:0:0:0:0:0:0:0:9301]}, publish_address {inet[/192.168.4.130:9301]}
+[2015-09-22 14:03:32,313][INFO ][cluster.service          ] [userdata] new_master [userdata][5za0xdJ7S_GfliXDNVKCrQ][inet[/192.168.4.130:9301]], reason: zen-disco-join (elected_as_master)
+[2015-09-22 14:03:32,421][INFO ][discovery                ] [userdata] elasticsearch/5za0xdJ7S_GfliXDNVKCrQ
+[2015-09-22 14:03:32,436][INFO ][http                     ] [userdata] bound_address {inet[/0:0:0:0:0:0:0:0:9201]}, publish_address {inet[/192.168.4.130:9201]}
+[2015-09-22 14:03:32,436][INFO ][node                     ] [userdata] {0.90.0}[31326]: started
+[2015-09-22 14:03:32,493][INFO ][gateway                  ] [userdata] recovered [0] indices into cluster_state
+[2015-09-22 14:03:38,115][WARN ][discovery.zen.ping.multicast] [userdata] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 14:03:39,606][WARN ][discovery.zen.ping.multicast] [userdata] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 14:03:41,134][WARN ][discovery.zen.ping.multicast] [userdata] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 15:10:48,173][INFO ][node                     ] [Sunstroke] {0.90.0}[30635]: stopping ...
+[2015-09-22 15:10:48,252][WARN ][discovery.zen.ping.multicast] [Sunstroke] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 15:10:48,367][WARN ][discovery.zen.ping.multicast] [Sunstroke] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 15:10:48,368][WARN ][discovery.zen.ping.multicast] [Sunstroke] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 15:10:48,438][WARN ][discovery.zen.ping.multicast] [userdata] received ping response ping_response{target [[Sunstroke][GsXIdDlETVSqCiTS4iweMQ][inet[/192.168.4.130:9300]]], master [[Sunstroke][GsXIdDlETVSqCiTS4iweMQ][inet[/192.168.4.130:9300]]], cluster_name[elasticsearch]} with no matching id [1]
+[2015-09-22 15:10:48,438][WARN ][discovery.zen.ping.multicast] [userdata] received ping response ping_response{target [[Sunstroke][GsXIdDlETVSqCiTS4iweMQ][inet[/192.168.4.130:9300]]], master [[Sunstroke][GsXIdDlETVSqCiTS4iweMQ][inet[/192.168.4.130:9300]]], cluster_name[elasticsearch]} with no matching id [1]
+[2015-09-22 15:10:48,495][INFO ][node                     ] [Sunstroke] {0.90.0}[30635]: stopped
+[2015-09-22 15:10:48,495][INFO ][node                     ] [Sunstroke] {0.90.0}[30635]: closing ...
+[2015-09-22 15:10:58,569][WARN ][netty.channel.DefaultChannelPipeline] An exception was thrown by an exception handler.
+java.util.concurrent.RejectedExecutionException: Worker has already been shutdown
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.registerTask(AbstractNioSelector.java:115)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:71)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:55)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioChannelSink.execute(AbstractNioChannelSink.java:34)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.execute(DefaultChannelPipeline.java:636)
+	at org.elasticsearch.common.netty.channel.Channels.fireExceptionCaughtLater(Channels.java:496)
+	at org.elasticsearch.common.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:46)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:781)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:725)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.doEncode(OneToOneEncoder.java:71)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:59)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:582)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:704)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:671)
+	at org.elasticsearch.common.netty.channel.AbstractChannel.write(AbstractChannel.java:248)
+	at org.elasticsearch.http.netty.NettyHttpChannel.sendResponse(NettyHttpChannel.java:152)
+	at org.elasticsearch.rest.action.index.RestIndexAction$1.onFailure(RestIndexAction.java:139)
+	at org.elasticsearch.action.index.TransportIndexAction$1.onFailure(TransportIndexAction.java:113)
+	at org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$2.run(TransportMasterNodeOperationAction.java:139)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 15:10:58,588][INFO ][node                     ] [Sunstroke] {0.90.0}[30635]: closed
+[2015-09-22 15:11:49,599][WARN ][discovery.zen.ping.multicast] [userdata] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 15:11:51,102][WARN ][discovery.zen.ping.multicast] [userdata] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 15:11:52,656][WARN ][discovery.zen.ping.multicast] [userdata] failed to read requesting data from /192.168.4.130:54328
+java.io.IOException: Expected handle header, got [27]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readString(HandlesStreamInput.java:65)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:402)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-09-22 20:59:51,901][INFO ][node                     ] [userdata] {0.90.0}[31326]: stopping ...
+[2015-09-22 20:59:52,309][INFO ][node                     ] [userdata] {0.90.0}[31326]: stopped
+[2015-09-22 20:59:52,309][INFO ][node                     ] [userdata] {0.90.0}[31326]: closing ...
+[2015-09-22 20:59:52,456][INFO ][node                     ] [userdata] {0.90.0}[31326]: closed

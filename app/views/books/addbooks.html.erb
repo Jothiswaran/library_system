@@ -1,5 +1,5 @@
 <h2>Add Books</h2>
-<% form_for(@book) do |f| %> 
+<% form_for @book do |f| %> 
   <%= f.error_messages %>
   <div class="field">
     <%= f.label :name , "Book Name" %><br />
@@ -15,4 +15,4 @@
 <% end %>
 <br>
 <br>
-<b><%= link_to "Library Home", bookshome_path %></b>
+<b><%= link_to "Library Home", books_path %></b>
