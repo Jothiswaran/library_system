@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/freshdesk/tire.git
+  revision: bc141ee8f1e705c21b42999dcd4edaf5b5cf6894
+  branch: multi_match
+  specs:
+    tire (0.4.3)
+      hashr (~> 0.0.19)
+      multi_json (~> 1.0)
+      rake
+      rest-client (~> 1.6)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -12,6 +23,7 @@ GEM
       activesupport (= 2.3.18)
     activesupport (2.3.18)
     chunky_png (1.3.4)
+    cocaine (0.4.2)
     colored (1.2)
     columnize (0.9.0)
     debugger (1.6.8)
@@ -20,9 +32,24 @@ GEM
       debugger-ruby_core_source (~> 1.3.5)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.3.8)
-    hoe (3.13.1)
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
+    gravatar (1.0)
+    gravatar_image_tag (1.2.0)
+    hashr (0.0.22)
+    hoe (3.14.2)
       rake (>= 0.8, < 11.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    mime-types (2.6.2)
+    multi_json (1.11.2)
     mysql2 (0.2.23)
+    netrc (0.10.3)
+    paperclip (2.8.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     rack (1.1.6)
     rails (2.3.18)
       actionmailer (= 2.3.18)
@@ -32,12 +59,19 @@ GEM
       activesupport (= 2.3.18)
       rake (>= 0.8.3)
     rake (0.8.7)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec (1.3.1)
     rspec-rails (1.3.3)
       rack (>= 1.0.0)
       rspec (= 1.3.1)
     test-unit (1.2.3)
       hoe (>= 1.5.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
 
 PLATFORMS
   ruby
@@ -46,13 +80,17 @@ DEPENDENCIES
   chunky_png
   colored
   debugger (~> 1.6.8)
+  gravatar
+  gravatar_image_tag
   mysql2 (= 0.2.23)
+  paperclip (~> 2.0)
   rack (~> 1.1.6)
   rails (= 2.3.18)
   rake (= 0.8.7)
   rspec (= 1.3.1)
   rspec-rails (= 1.3.3)
   test-unit (= 1.2.3)
+  tire!
 
 BUNDLED WITH
    1.10.6

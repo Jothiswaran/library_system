@@ -1,13 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :borrows
 
-  map.resources :books
+  map.resources :borrows,:books,:users,:libraries
 
-  # map.resources :books
-
-  map.resources :users
-  map.resources :libraries
   map.resources :sessions, :only => [:new, :create, :destroy]
+
   map.signin '/signin', :controller => 'sessions', :action => 'new' 
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
   
@@ -21,7 +17,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.add '/add', :controller => 'libraries', :action => 'new'
   map.show '/show', :controller => 'libraries', :action => 'show'
-
+  map.search2 '/show', :controller => 'libraries', :action => 'show'
   map.addbooks  '/addbooks', :controller => 'books', :action => 'addbooks'
   map.addb  '/addb', :controller => 'books', :action => 'add'
   map.searchbooks  '/searchbooks', :controller => 'books', :action => 'searchbooks'
@@ -35,6 +31,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.returnlibrary '/returnlibrary', :controller => 'borrows', :action => 'returnlibrary'
   map.renewlibrary '/renewlibrary', :controller => 'borrows', :action => 'renewlibrary'
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

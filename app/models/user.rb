@@ -1,11 +1,12 @@
 require 'digest'
+require 'rubygems'
 require 'tire'
 class User < ActiveRecord::Base
 
-	#include Tire::Model::Search
+	include Tire::Model::Search
 	#include Tire::Model::Callbacks
 #	include Elasticsearsch::Model
-#	include Elasticsearch::Model::Callbacks
+	# include Elasticsearch::Model::Callbacks
 	
 	has_many :borrows, :dependent => :destroy
 	has_many :books, :through => :borrows

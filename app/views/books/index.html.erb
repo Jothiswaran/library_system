@@ -6,12 +6,18 @@
 				:url=>{:controller=>"Libraries",
 					 :action => "new"} %>
 				</li>
-<!--				<li><%= link_to "Add Library", add_path %></li> -->
-				<li><%= link_to_remote "List of all Libraries", 
-				:update => "addlib",
-				:url=>{:controller=>"Libraries",
-					 :action => "show"} %>
-<!--				<li><%= link_to "List of all Libraries", show_path %></li> -->
+				<br>
+				<li>
+				<% form_for :book, :url=> show_path do |f| %>
+			  <div class="field">
+			  <%= f.label :library_id, "Library Name" %><br/><br/>
+			  <%= f.collection_select(:search, Library.all, :id, :name) %>
+			  </div>
+			  <div class="actions">
+			  <%= f.submit "Search Library" %>
+			  </div> 
+			<% end %>
+				</li>
 			</ul>
 			<div id="addlib">
 			</div>
@@ -34,6 +40,7 @@
 		<% if current_user.admin? %>
 			<br><br>
 			<h3>Send email to the users who have crossed the renewal date.</h3>
+			<% if !@usr.empty? %>
 			<% form_tag books_path, :method => 'get' do %>
 			<%= submit_tag "Sent email", :name=>'sentemail' %>
 			<% end %>
@@ -55,6 +62,9 @@
 			</table>
 			<br>
 			<br>
+			<% else %>
+				<p> There are no users who crossed the renewal date
+			<% end %>
 		<% end %>
 		</div>
-		<% end %>
+	<% end %>

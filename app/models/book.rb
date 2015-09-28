@@ -8,6 +8,9 @@ class Book < ActiveRecord::Base
 
 		named_scope :searchAuthor, lambda { |search,libraryid| {:conditions => ['author LIKE ? and library_id=?', "%#{search}%","#{libraryid}" ] } }
 
+		before_create :setDefaults
+			
+		
 		has_many :borrows
 		has_many :users, :through => :borrows
 		belongs_to :library
@@ -17,11 +20,13 @@ class Book < ActiveRecord::Base
 		validates_length_of :author, :maximum =>30
 		validates_uniqueness_of :name, :case_sensitive => false
 
+		def setDefaults 
+			self.available=true;
+		end
 
-	def self.update(id)
-		@b=Book.find(id)
-		@b.available=false
-		@b.save
-	end
-
+		def self.update(id)
+			@b=Book.find(id)
+			@b.available=false
+			@b.save
+		end
 end

@@ -1,23 +1,27 @@
 class BorrowsController < ApplicationController
   before_filter :authenticate
+  before_filter :setIssue,:only => [:issue]
+
+
+  def setIssue
+    @borrow=Borrow.new(:borrow_date=>Date.today, :return_date => '', :returned =>false,
+                  :user_id => current_user[:id], :expected_return_date => Date.today+10)
+  end
   
   def issue
-    @borrow=Borrow.new(:borrow_date=>Date.today, :return_date => '', :returned =>false,
-                  :user_id => current_user[:id], :book_id => params[:book_id], :expected_return_date => Date.today+10);
-    if @borrow.save
+    @borrow.book_id=params[:book_id]
+     if @borrow.save
       params[:id]=params[:book_id]
       Book.update(params[:id])
     end
   end
 
   def returnbooks
-
     returns = Borrow.returnbook(current_user[:id])
     @returnbooks=[]
         returns.each do |temp|
-       @returnbooks << temp
-   end
-
+          @returnbooks << temp
+        end
   end
 
   def returnlibrary

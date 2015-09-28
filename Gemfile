@@ -9,21 +9,19 @@ gem "mysql2", "0.2.23"
 gem "colored"
 gem "chunky_png"
 gem 'gravatar'
-gem 'prototype-rails', '3.2.0'
+gem 'gravatar_image_tag'
 #gem 'pry'
 #gem 'pry-byebug'
 
 gem 'debugger', '~>1.6.8'
 gem "test-unit", '1.2.3'
 gem "paperclip", "~> 2.0"
-gem 'actionmailer'
 
 #gem 'elasticsearch-model' '0.1.7'
 #gem 'elasticsearch-rails', '0.1.7'
 
 #gem 'elasticsearch', '0.90.0'
-gem 'tire'
-
+ gem 'tire', :git => "git://github.com/freshdesk/tire.git", :branch => "multi_match"
 
 group :test do
   # gem "cucumber", "0.10.2"

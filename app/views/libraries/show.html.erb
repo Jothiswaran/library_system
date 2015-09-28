@@ -1,0 +1,19 @@
+<% if @rslt %>
+<table border ="0" cellspacing="20">
+<tr align ="left">
+<th>Library ID </th>
+<th >Library Name </th>
+<th>City </th>
+<th>Phone</th>
+</tr>
+<% @rslt.each do |f| %>
+<td> <%= f.library.id %> </td>
+<td> <%= f.library.name %></td>
+<td> <%= f.library.city %></td>
+<td> <%= f.library.phone %></td>
+</tr>
+<% end %>
+</table>
+<% else %>
+<p> There are no libraries available </p>
+<% end %>

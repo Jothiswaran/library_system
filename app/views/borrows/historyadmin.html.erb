@@ -1,3 +1,4 @@
+<% if !@unreturned.empty? %>
 <table border ="0" cellspacing="20">
 <tr align ="left">
 <th>User ID </th>
@@ -24,4 +25,7 @@
 </tr>
 <% end %>
 </table>
+<% else %>
+<p>No History of Renewals and Returns</p>
+<% end %>
  <b><%= link_to "Library Home", books_path %></b>

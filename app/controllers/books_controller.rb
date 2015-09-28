@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
 before_filter :authenticate
 
+
 def index
     @borrowed = Borrow.pendingreturn
     @usr =[]
@@ -29,8 +30,8 @@ def destroy
   redirect_to searchbooks_path
 end
 
+
 def create
-  params[:book][:available]=true
   params[:book][:library_id]=current_user.library_id
   @book = Book.new(params[:book])
   if @book.save
